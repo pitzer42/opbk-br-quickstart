@@ -1,0 +1,11 @@
+version: "/v1"
+api_family:
+  common: "/discovery"
+  admin: "/admin"
+  channels: "/channels"
+  products_services: "/products-services"
+hosts:
+  santander: ""
+  itau: ""
+  bradesco: ""
+  banco_do_brasil: ""
