@@ -71,15 +71,6 @@ class BankingAgentAvailabilityStandards(object):
         :param weekday: The weekday of this BankingAgentAvailabilityStandards.  # noqa: E501
         :type: str
         """
-        if weekday is None:
-            raise ValueError("Invalid value for `weekday`, must not be `None`")  # noqa: E501
-        allowed_values = ["DOMINGO", "SEGUNDA_FEIRA", "TERCA_FEIRA", "QUARTA_FEIRA", "QUINTA_FEIRA", "SEXTA_FEIRA", "SABADO"]  # noqa: E501
-        if weekday not in allowed_values:
-            raise ValueError(
-                "Invalid value for `weekday` ({0}), must be one of {1}"  # noqa: E501
-                .format(weekday, allowed_values)
-            )
-
         self._weekday = weekday
 
     @property

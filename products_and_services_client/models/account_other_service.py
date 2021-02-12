@@ -131,9 +131,6 @@ class AccountOtherService(object):
         :param charging_trigger_info: The charging_trigger_info of this AccountOtherService.  # noqa: E501
         :type: str
         """
-        if charging_trigger_info is None:
-            raise ValueError("Invalid value for `charging_trigger_info`, must not be `None`")  # noqa: E501
-
         self._charging_trigger_info = charging_trigger_info
 
     @property

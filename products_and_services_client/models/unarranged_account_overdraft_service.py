@@ -84,11 +84,6 @@ class UnarrangedAccountOverdraftService(object):
         if name is None:
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         allowed_values = ["CONCESSAO_ADIANTAMENTO_DEPOSITANTE"]  # noqa: E501
-        if name not in allowed_values:
-            raise ValueError(
-                "Invalid value for `name` ({0}), must be one of {1}"  # noqa: E501
-                .format(name, allowed_values)
-            )
 
         self._name = name
 
@@ -115,11 +110,6 @@ class UnarrangedAccountOverdraftService(object):
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
         allowed_values = ["ADIANT_DEPOSITANTE"]  # noqa: E501
-        if code not in allowed_values:
-            raise ValueError(
-                "Invalid value for `code` ({0}), must be one of {1}"  # noqa: E501
-                .format(code, allowed_values)
-            )
 
         self._code = code
 

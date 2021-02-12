@@ -69,15 +69,6 @@ class BranchAvailabilityStandards(object):
         :param weekday: The weekday of this BranchAvailabilityStandards.  # noqa: E501
         :type: str
         """
-        if weekday is None:
-            raise ValueError("Invalid value for `weekday`, must not be `None`")  # noqa: E501
-        allowed_values = ["DOMINGO", "SEGUNDA_FEIRA", "TERCA_FEIRA", "QUARTA_FEIRA", "QUINTA_FEIRA", "SEXTA_FEIRA", "SABADO"]  # noqa: E501
-        if weekday not in allowed_values:
-            raise ValueError(
-                "Invalid value for `weekday` ({0}), must be one of {1}"  # noqa: E501
-                .format(weekday, allowed_values)
-            )
-
         self._weekday = weekday
 
     @property
@@ -100,9 +91,6 @@ class BranchAvailabilityStandards(object):
         :param opening_time: The opening_time of this BranchAvailabilityStandards.  # noqa: E501
         :type: str
         """
-        if opening_time is None:
-            raise ValueError("Invalid value for `opening_time`, must not be `None`")  # noqa: E501
-
         self._opening_time = opening_time
 
     @property
@@ -125,9 +113,6 @@ class BranchAvailabilityStandards(object):
         :param closing_time: The closing_time of this BranchAvailabilityStandards.  # noqa: E501
         :type: str
         """
-        if closing_time is None:
-            raise ValueError("Invalid value for `closing_time`, must not be `None`")  # noqa: E501
-
         self._closing_time = closing_time
 
     def to_dict(self):

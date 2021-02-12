@@ -68,9 +68,6 @@ class PersonalUnarrangedAccountOverdraft(object):
         :param fees: The fees of this PersonalUnarrangedAccountOverdraft.  # noqa: E501
         :type: PersonalUnarrangedAccountOverdraftFee
         """
-        if fees is None:
-            raise ValueError("Invalid value for `fees`, must not be `None`")  # noqa: E501
-
         self._fees = fees
 
     @property
@@ -116,9 +113,6 @@ class PersonalUnarrangedAccountOverdraft(object):
         :param terms_conditions: The terms_conditions of this PersonalUnarrangedAccountOverdraft.  # noqa: E501
         :type: str
         """
-        if terms_conditions is None:
-            raise ValueError("Invalid value for `terms_conditions`, must not be `None`")  # noqa: E501
-
         self._terms_conditions = terms_conditions
 
     def to_dict(self):

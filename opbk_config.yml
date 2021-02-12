@@ -5,7 +5,7 @@ api_family:
   channels: "/channels"
   products_services: "/products-services"
 hosts:
-  santander: ""
-  itau: ""
-  bradesco: ""
-  banco_do_brasil: ""
+  santander: "https://openbanking.api.santander.com.br/open-banking"
+  itau: "https://api.itau/open-banking"
+  bradesco: "https://api.bradesco.com/bradesco/open-banking"
+  banco_do_brasil: "https://opendata.api.bb.com.br/open-banking"

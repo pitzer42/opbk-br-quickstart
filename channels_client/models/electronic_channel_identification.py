@@ -70,15 +70,6 @@ class ElectronicChannelIdentification(object):
         :param type: The type of this ElectronicChannelIdentification.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-        allowed_values = ["INTERNET_BANKING", "MOBILE_BANKING", "SAC", "OUVIDORIA", "CHAT", "OUTROS"]  # noqa: E501
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
         self._type = type
 
     @property
@@ -124,9 +115,6 @@ class ElectronicChannelIdentification(object):
         :param urls: The urls of this ElectronicChannelIdentification.  # noqa: E501
         :type: list[ElectronicChannelUrl]
         """
-        if urls is None:
-            raise ValueError("Invalid value for `urls`, must not be `None`")  # noqa: E501
-
         self._urls = urls
 
     def to_dict(self):

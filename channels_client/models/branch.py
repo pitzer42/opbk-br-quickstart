@@ -169,9 +169,6 @@ class Branch(object):
         :param services: The services of this Branch.  # noqa: E501
         :type: list[BranchService]
         """
-        if services is None:
-            raise ValueError("Invalid value for `services`, must not be `None`")  # noqa: E501
-
         self._services = services
 
     def to_dict(self):

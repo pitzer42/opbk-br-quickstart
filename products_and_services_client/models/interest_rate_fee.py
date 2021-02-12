@@ -65,15 +65,6 @@ class InterestRateFee(object):
         :param referential_rate_indexer: The referential_rate_indexer of this InterestRateFee.  # noqa: E501
         :type: str
         """
-        if referential_rate_indexer is None:
-            raise ValueError("Invalid value for `referential_rate_indexer`, must not be `None`")  # noqa: E501
-        allowed_values = ["SEM_INDEXADOR_TAXA", "PRE_FIXADO", "POS_FIXADO_TR_TBF", "POS_FIXADO_TJLP", "POS_FIXADO_LIBOR", "POS_FIXADO_TLP", "OUTRAS_TAXAS_POS_FIXADAS", "FLUTUANTES_CDI", "FLUTUANTES_SELIC", "OUTRAS_TAXAS_FLUTUANTES", "INDICES_PRECOS_IGPM", "INDICES_PRECOS_IPCA", "INDICES_PRECOS_IPCC", "OUTROS_INDICES_PRECO", "CREDITO_RURAL_TCR_PRE", "CREDITO_RURAL_TCR_POS", "CREDITO_RURAL_TRFC_PRE", "CREDITO_RURAL_TRFC_POS", "OUTROS_INDEXADORES"]  # noqa: E501
-        if referential_rate_indexer not in allowed_values:
-            raise ValueError(
-                "Invalid value for `referential_rate_indexer` ({0}), must be one of {1}"  # noqa: E501
-                .format(referential_rate_indexer, allowed_values)
-            )
-
         self._referential_rate_indexer = referential_rate_indexer
 
     @property
@@ -96,9 +87,6 @@ class InterestRateFee(object):
         :param rate: The rate of this InterestRateFee.  # noqa: E501
         :type: str
         """
-        if rate is None:
-            raise ValueError("Invalid value for `rate`, must not be `None`")  # noqa: E501
-
         self._rate = rate
 
     def to_dict(self):

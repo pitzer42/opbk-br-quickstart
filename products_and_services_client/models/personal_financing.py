@@ -77,15 +77,6 @@ class PersonalFinancing(object):
         :param type: The type of this PersonalFinancing.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-        allowed_values = ["FINANCIAMENTO_AQUISICAO_BENS_VEICULOS_AUTOMOTORES", "FINANCIAMENTO_AQUISICAO_BENS_OUTROS_BENS", "FINANCIAMENTO_MICROCREDITO", "FINANCIAMENTO_RURAL_CUSTEIO", "FINANCIAMENTO_RURAL_INVESTIMENTO", "FINANCIAMENTO_RURAL_COMERCIALIZACAO", "FINANCIAMENTO_RURAL_INDUSTRIALIZACAO", "FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFH", "FINANCIAMENTO_IMOBILIARIO_SISTEMA_FINANCEIRO_HABITACAO_SFI"]  # noqa: E501
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
         self._type = type
 
     @property
@@ -106,9 +97,6 @@ class PersonalFinancing(object):
         :param fees: The fees of this PersonalFinancing.  # noqa: E501
         :type: PersonalFinancingFee
         """
-        if fees is None:
-            raise ValueError("Invalid value for `fees`, must not be `None`")  # noqa: E501
-
         self._fees = fees
 
     @property
@@ -131,9 +119,6 @@ class PersonalFinancing(object):
         :param interest_rates: The interest_rates of this PersonalFinancing.  # noqa: E501
         :type: list[FinancingInterestRate]
         """
-        if interest_rates is None:
-            raise ValueError("Invalid value for `interest_rates`, must not be `None`")  # noqa: E501
-
         self._interest_rates = interest_rates
 
     @property
@@ -154,9 +139,6 @@ class PersonalFinancing(object):
         :param required_warranties: The required_warranties of this PersonalFinancing.  # noqa: E501
         :type: list[RequiredWarranty]
         """
-        if required_warranties is None:
-            raise ValueError("Invalid value for `required_warranties`, must not be `None`")  # noqa: E501
-
         self._required_warranties = required_warranties
 
     @property
@@ -179,9 +161,6 @@ class PersonalFinancing(object):
         :param terms_conditions: The terms_conditions of this PersonalFinancing.  # noqa: E501
         :type: str
         """
-        if terms_conditions is None:
-            raise ValueError("Invalid value for `terms_conditions`, must not be `None`")  # noqa: E501
-
         self._terms_conditions = terms_conditions
 
     def to_dict(self):

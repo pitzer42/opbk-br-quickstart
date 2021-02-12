@@ -70,15 +70,6 @@ class PhoneChannelService(object):
         :param name: The name of this PhoneChannelService.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        allowed_values = ["ABERTURA_CONTAS_DEPOSITOS_OU_PAGAMENTO_PRE_PAGA", "SAQUE_MOEDA_EM_ESPECIE", "RECEBIMENTOS_PAGAMENTOS_QUALQUER_NATUREZA", "TRANSFERENCIAS_ELETRONICAS_VISANDO_MOVIMENTACAO_CONTAS_DEPOSITOS_OU_PAGAMENTO_TITULARIDADE_CLIENTES", "CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_CONTAS_PAGAMENTOS", "APLICACOES_RESGATES_INVESTIMENTOS", "EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGAMENTO_SOLICITACAO_CLIENTES_USUARIOS", "DEPOSITOS_MOEDA_ESPECIE_CHEQUE", "OPERACOES_CREDITO_BEM_COMO_OUTROS_SERVICOS_PRESTADOS_ACOMPANHAMENTO_OPERACAO", "CARTAO_CREDITO", "SEGUROS", "OPERACOES_ARRENDAMENTO_MERCANTIL", "ABERTURA_CONTA_PAGAMENTO_POS_PAGA", "COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE", "COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_BEM_COMO_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO", "COMPRA_VENDA_OURO", "OUTROS_PRODUTOS_SERVICOS", "CANCELAMENTO", "INFORMACOES", "RECLAMACOES"]  # noqa: E501
-        if name not in allowed_values:
-            raise ValueError(
-                "Invalid value for `name` ({0}), must be one of {1}"  # noqa: E501
-                .format(name, allowed_values)
-            )
-
         self._name = name
 
     @property
@@ -101,15 +92,6 @@ class PhoneChannelService(object):
         :param code: The code of this PhoneChannelService.  # noqa: E501
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
-        allowed_values = ["ABRE_CONTA_DEPOSITO_OU_PRE_PAGA", "SAQUE_MOEDA_ESPECIE", "RECEBE_PAGA_QUALQUER_NATUREZA", "TRANSFERENCIAS_ELETRONICAS_MOVIMENTA_CONTAS_DEPOSITOS_OU_PAGTO_TITULARES_CLIENTES", "CONSULTA_SALDOS_EXTRATOS_CONTAS_DEPOSITOS_PAGTOS", "APLICA_RESGATA_INVESTIMENTOS", "EXECUCAO_ATIVA_PASSIVA_ORDENS_PAGTO", "DEPOSITO_MOEDA_ESPECIE_CHEQUE", "OPERA_CREDITO_OUTROS_SERVICOS_ACOMPANHA_OPERACAO", "CARTAO_CREDITO", "SEGUROS", "OPERA_ARRENDAMENTO_MERCANTIL", "ABERTURA_CONTA_PAGAMENTO_POS_PAGA", "COMPRA_VENDA_MOEDA_ESTRANGEIRA_ESPECIE", "COMPRA_VENDA_CHEQUE_CHEQUE_VIAGEM_CARGA_MOEDA_ESTRANGEIRA_CARTAO_PRE_PAGO", "COMPRA_VENDA_OURO", "OUTROS_PRODUTOS_SERVICOS", "CANCELAMENTO", "INFORMACOES", "RECLAMACOES"]  # noqa: E501
-        if code not in allowed_values:
-            raise ValueError(
-                "Invalid value for `code` ({0}), must be one of {1}"  # noqa: E501
-                .format(code, allowed_values)
-            )
-
         self._code = code
 
     @property

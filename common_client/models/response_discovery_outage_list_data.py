@@ -73,8 +73,6 @@ class ResponseDiscoveryOutageListData(object):
         :param outage_time: The outage_time of this ResponseDiscoveryOutageListData.  # noqa: E501
         :type: str
         """
-        if outage_time is None:
-            raise ValueError("Invalid value for `outage_time`, must not be `None`")  # noqa: E501
 
         self._outage_time = outage_time
 
@@ -98,9 +96,6 @@ class ResponseDiscoveryOutageListData(object):
         :param duration: The duration of this ResponseDiscoveryOutageListData.  # noqa: E501
         :type: str
         """
-        if duration is None:
-            raise ValueError("Invalid value for `duration`, must not be `None`")  # noqa: E501
-
         self._duration = duration
 
     @property
@@ -123,8 +118,6 @@ class ResponseDiscoveryOutageListData(object):
         :param is_partial: The is_partial of this ResponseDiscoveryOutageListData.  # noqa: E501
         :type: bool
         """
-        if is_partial is None:
-            raise ValueError("Invalid value for `is_partial`, must not be `None`")  # noqa: E501
 
         self._is_partial = is_partial
 
@@ -148,8 +141,6 @@ class ResponseDiscoveryOutageListData(object):
         :param explanation: The explanation of this ResponseDiscoveryOutageListData.  # noqa: E501
         :type: str
         """
-        if explanation is None:
-            raise ValueError("Invalid value for `explanation`, must not be `None`")  # noqa: E501
 
         self._explanation = explanation
 
