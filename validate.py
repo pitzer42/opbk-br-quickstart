@@ -1,4 +1,5 @@
-from opbk_br_quickstart.client_factory import create_client, Participants, ApiFamily, AdminApiFamily,CommonApiFamily, ChannelsApiFamily, ProductsServicesApiFamily
+from opbk_br_quickstart.client_factory import create_client, ApiFamily, AdminApiFamily,CommonApiFamily, ChannelsApiFamily, ProductsServicesApiFamily
+from participant_endpoints import get_endpoints
 
 
 separator = '----------------------------------------------'
@@ -23,32 +24,32 @@ def list_api_methods(client):
     return methods
 
 
-def validate_participant(participant):
+def validate_participant(participant, host):
 
     print(header)
-    print(participant.value.upper())
+    print(participant)
     print(header)
 
     validate_client(create_client(
+        host,
         ApiFamily.ADMIN,
-        AdminApiFamily.METRICS,
-        participant))
+        AdminApiFamily.METRICS))
     
     validate_client(create_client(
+        host,
         ApiFamily.COMMON,
-        CommonApiFamily.DISCOVERY,
-        participant))
+        CommonApiFamily.DISCOVERY))
     
     validate_client(create_client(
+        host,
         ApiFamily.CHANNELS,
-        ChannelsApiFamily.CHANNELS,
-        participant))
+        ChannelsApiFamily.CHANNELS))
 
     for product_service_api_family in ProductsServicesApiFamily:
         validate_client(create_client(
+            host,
             ApiFamily.PRODUCTS_SERVICES,
-            product_service_api_family,
-            participant))
+            product_service_api_family))
 
 
 def validate_client(client):
@@ -61,5 +62,5 @@ def validate_client(client):
             print(e)
         print(separator)
 
-for participant in Participants:
-    validate_participant(participant)
+for participant, endpoint in get_endpoints().items():
+    validate_participant(participant, endpoint)

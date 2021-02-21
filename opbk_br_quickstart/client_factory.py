@@ -26,14 +26,6 @@ from products_and_services_client.api import UnarrangedAccountOverdraftApi
 CONFIG_FILE = 'opbk_config.yml'
 VERSION_KEY = 'version'
 FAMILY_KEY = 'api_family'
-HOSTS_KEY = 'hosts'
-
-
-class Participants(Enum):
-    ITAU = 'itau'
-    SANTANDER = 'santander'
-    BANCO_DO_BRASIL = 'banco_do_brasil'
-    BRADESCO = 'bradesco'
 
 
 class ApiFamily(Enum):
@@ -77,18 +69,18 @@ CLIENT_MAP = {
 }
 
 
-def create_client(api_family, api_type, participant):
-    host = _get_host(api_family, participant)
+def create_client(host, api_family, api_type):
+    host = _get_host(host, api_family)
     return _create_api(host, *CLIENT_MAP[api_type])
 
 
-def _get_host(api_family, participant):
+
+def _get_host(host, api_family):
     with open(CONFIG_FILE) as config_file:
         content = config_file.read()
         config = yaml.load(content)
         version = config[VERSION_KEY]
         family = config[FAMILY_KEY][api_family.value]
-        host = config[HOSTS_KEY][participant.value]
         return host + family + version
 
 

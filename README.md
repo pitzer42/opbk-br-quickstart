@@ -9,7 +9,7 @@ Python clients generated with [Swagger Hub](https://app.swaggerhub.com/home).
 
 ## Looking for Bugs? 🐛
 
-Try to fill up the host addresses in opbk_config.yml and run validate.py
+take a look at [validation_results.txt](https://github.com/pitzer42/opbk-br-quickstart/blob/main/app.py)
 
 
 ## API Docs

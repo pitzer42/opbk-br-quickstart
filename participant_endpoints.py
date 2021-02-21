@@ -28,4 +28,5 @@ def get_endpoints():
         except IndexError:
             # participant does not have this resource. Just skip it.
             pass
+    
     return endpoints
