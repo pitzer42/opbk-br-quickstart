@@ -9,7 +9,7 @@ Python clients generated with [Swagger Hub](https://app.swaggerhub.com/home).
 
 ## Looking for Bugs? 🐛
 
-take a look at [validation_results.txt](https://github.com/pitzer42/opbk-br-quickstart/blob/main/app.py)
+take a look at [validation_results.txt](https://github.com/pitzer42/opbk-br-quickstart/blob/main/validation_results.txt)
 
 
 ## API Docs
